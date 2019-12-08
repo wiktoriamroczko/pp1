@@ -46,8 +46,7 @@ def star(x,y):
         turtle.fd(25)
         turtle.rt(-48)
     turtle.end_fill()
-    
-star(1,1)
+
     
 def black_square(m,x,y):
     import turtle
