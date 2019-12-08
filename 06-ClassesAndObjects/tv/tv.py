@@ -4,6 +4,7 @@ class TV():
         self.is_on = False
         self.channel_no = 1
         self.channels  = []
+        self.volume = 0
         
     def off(self):
         self.is_on = False
@@ -16,34 +17,29 @@ class TV():
         
     def set_channels(self, name):
         self.channels.append(name)
+        
+    def turn_up(self):
+        if self.volume < 10:
+            self.volume += 1
             
+    def turn_down(self):
+        if self.volume > 0:
+            self.volume -= 1
         
     def show_channels(self):
         print("LISTA KANAŁÓW:")
         for i in self.channels:
             print (i, end=', ')
+        print('')
                 
     
     def show_status(self):
         if self.is_on == False:
             print('Telewizor jest wyłączony')
-        elif:
-            if slef.channel_no < len(self.channels):
+        elif self.channel_no <= len(self.channels) and self.is_on == True:
+            x = self.channel_no - 1
+            print(f'Telewizor jest załączony, kanał {self.channel_no} ({self.channels[x]})')
+            print(f'Poziom głośności: {self.volume}')
         else:
             print(f'Telewizor jest załączony, kanał {self.channel_no}')
-
-            
-tv = TV()
-tv.show_status()
-tv.on()
-tv.show_status()
-tv.set_channel(5)
-tv.show_status()
-tv.off()
-tv.show_status()
-tv.set_channels('TVP1')
-tv.set_channels('TVP2')
-tv.set_channels('Polsat')
-tv.set_channels('TVN')
-tv.set_channels('Filmbox')
-tv.show_channels()
+            print(f'Poziom głośności: {self.volume}')

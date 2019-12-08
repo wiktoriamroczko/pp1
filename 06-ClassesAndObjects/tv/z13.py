@@ -1,0 +1,15 @@
+import tv
+
+tele = tv.TV()
+tele.show_status()
+tele.on()
+tele.show_status()
+tele.show_channels()
+tele.set_channels('TVP1')
+tele.set_channels('TVP2')
+tele.set_channels('Polsat')
+tele.set_channels('TVN')
+tele.set_channels('Filmbox')
+tele.show_channels()
+tele.show_status()
+tele.off()
