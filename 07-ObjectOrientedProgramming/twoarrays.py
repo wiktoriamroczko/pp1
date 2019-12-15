@@ -11,3 +11,5 @@ print(array2)
 
 el = a2.szukaj(array2, -1, 1)
 print(el, len(el))
+a2.set_sep('*')
+a2.with_comma(array2)

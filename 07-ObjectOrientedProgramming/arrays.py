@@ -1,5 +1,11 @@
 class arrays():
     
+    x = ','
+         
+    @staticmethod
+    def set_sep(z):
+        arrays.x = z
+    
     @staticmethod
     def print_in_col(array):
         for c in array:
@@ -7,11 +13,14 @@ class arrays():
     
     @staticmethod
     def with_comma(array):
+        p = 0
         for c in array:
-            if c == array[-1]:
+            if p == len(array)-1:
                 print(c)
             else:
-                print(c, end=', ')
+                print(c, end=f'{arrays.x}')
+                p+=1
+                
                 
     @staticmethod
     def arr1(liczba_elementow_tablicy,wartosc_elementow_tablicy):
