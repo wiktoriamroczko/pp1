@@ -25,13 +25,27 @@ class matrix():
     def transponse(matrix):
             return [[matrix[j][i] for j in range (len(matrix))]for i in range(len(matrix[0]))]
 
+    @staticmethod      
+    def create_diagonal(x,m,n):
+        import random
+        z = matrix.create(x,x)
+        pom = 0
+        for i in z:
+            x = random.randint(m,n)
+            i[pom] = x
+            pom+=1
+        return z
+            
     @staticmethod
     def print(matrix):
         for row in matrix:
             print(row)
-
+            
 m = matrix.create(3,4)
-m = matrix.transponse(m)
 matrix.print(m)
+x = matrix.transponse(m)
+matrix.print(x)
 n = matrix.create_unit(5)
 matrix.print(n)
+b = matrix.create_diagonal(4,10,20)
+matrix.print(b)

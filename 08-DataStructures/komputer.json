@@ -1,0 +1,15 @@
+{
+    "brand": "HP",
+    "used": false,
+    "Memory card reader": [
+        "SD",
+        "SDHC",
+        "SDXC"
+    ],
+    "year": 2019,
+    "parameters": {
+        "color": "black",
+        "type": "laptop",
+        "guarantee": "2 years"
+    }
+}

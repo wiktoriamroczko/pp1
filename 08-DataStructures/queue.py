@@ -1,20 +1,20 @@
-class Stack:
-
+class Queue():
+    
     def __init__(self):
-        self.stack = []
-
+        self.queue = []
+        
     def pop(self):
         if self.is_empty():
             return None
-        return self.stack.pop()
+        return self.queue.pop(0)
 
     def push(self, item):
-        self.stack.append(item)
+        self.queue.append(item)
 
     def is_empty(self):
-        return len(self.stack)==0
+        return len(self.queue)==0
     
-s = Stack()
+s = Queue()
 s.push(2)
 s.push(5)
 s.push(9)

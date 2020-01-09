@@ -25,3 +25,11 @@ GBP = {
         }
     ]
 }
+
+x = GBP['rates']
+print(f'%-10s' % 'DATA', 'KURS')
+print('='*17)
+n = 0
+for i in x:
+    print(x[n]['effectiveDate'], x[n]['mid'])
+    n+=1
