@@ -1,10 +1,16 @@
 # Sumuje liczby nturalne parzyste z przedziału <from_n,to_n>
 def sum_even(from_m,to_n):
     sum = 0
-    for i in range(from_m,to_n):
-        if i%2 == 0: # liczba parzysta
-            sum += i
-    return sum
+    if from_m >= 0:
+        for i in range(from_m,to_n+1):
+            if i%2 == 0: # liczba parzysta
+                sum += i
+        return sum
+    else:
+        for i in range(0,to_n+1):
+            if i%2 == 0: # liczba parzysta
+                sum += i
+        return sum
 
 def main():
     m = 1
