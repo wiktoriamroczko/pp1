@@ -15,14 +15,13 @@ class Macierz():
                 i[j]=random.randint(0,9)
 
     def __add__(self,other):
-        pom1 = 0
-        pom2 = 0
-        for _ in range(len(self.macierz)):
-            for _ in range(len(self.macierz[0])):
-                self.macierz[pom1][pom2] += other.macierz[pom1][pom2]
-                pom2 += 1
-            pom1 += 1
-        return self.macierz
+        if self.m == other.m and self.n == other.n:
+            for i in range(len(self.macierz)):
+                for j in range(len(self.macierz[0])):
+                    self.macierz[i][j] += other.macierz[i][j]
+            return [i for i in self.macierz]
+        else:
+            return []
             
     def print(self):
         for i in self.macierz:
